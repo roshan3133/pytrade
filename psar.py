@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-
 """
-http://virtualizedfrog.wordpress.com/   2014
-
 Translated from http://www.amibroker.com/library/detail.php?id=268
 Requires pandas to load csv files, and matplotlib to chart the data
 
