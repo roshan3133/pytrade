@@ -7,16 +7,17 @@ class FinanceAPI:
     self.prefix = "http://finance.google.com/finance/info?client=ig&q="
   def get(self,symbol,exchange):
     url = self.prefix+"%s:%s"%(exchange,symbol)
+    print url
     u = urllib2.urlopen(url)
     content = u.read()
 
     obj = json.loads(content[3:])
-    return obj[0]
+    return obj[:]
 
 if __name__ == "__main__":
     c = FinanceAPI()
     while 1:
       quote = c.get("NSE","BANKNIFTY")
       print quote
-      time.sleep(05)
+      time.sleep(10)
 
